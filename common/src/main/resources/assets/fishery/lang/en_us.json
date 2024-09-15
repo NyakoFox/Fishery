@@ -1,0 +1,11 @@
+{
+    "fishery.configuration.section.fishery.server.toml.title": "Fishery Server Configuration",
+    "fishery.configuration.section.fishery.server.toml": "Fishery Server Configuration",
+    "fishery.configuration.title": "Fishery Configuration",
+
+    "block.fishery.wooden_crate": "Wooden Crate",
+    "block.fishery.iron_crate": "Iron Crate",
+    "block.fishery.golden_crate": "Golden Crate",
+    "block.fishery.diamond_crate": "Diamond Crate",
+    "block.fishery.netherite_crate": "Netherite Crate"
+}

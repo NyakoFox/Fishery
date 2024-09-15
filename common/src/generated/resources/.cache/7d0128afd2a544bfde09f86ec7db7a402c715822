@@ -1,0 +1,16 @@
+// 1.21	2024-09-15T19:30:57.1583939	Block States: fishery
+6a08b1ea8ab8d1bc6d4237182091777996fe466c assets/fishery/blockstates/diamond_crate.json
+621a006b2977f7161892e0ae391d95240db047b5 assets/fishery/blockstates/golden_crate.json
+8a839590a54f3ae96a850fc97d41d0f5b14f5c22 assets/fishery/blockstates/iron_crate.json
+eacc8c5a352f9892c28868d6a82dd78c8a6c7039 assets/fishery/blockstates/netherite_crate.json
+a609d1471cc929ed4dd7540d562e4c1789d7b888 assets/fishery/blockstates/wooden_crate.json
+94cba3682705c106c591c97f1604209aa6e4f052 assets/fishery/models/block/diamond_crate.json
+960064fe8c2280078b8126f0c0c97d334c517064 assets/fishery/models/block/golden_crate.json
+90d93c1e1d353eb3fd6235ef6a02e6a580501385 assets/fishery/models/block/iron_crate.json
+44e935348d1dcf5ff384ac7e7d4230605bfe5afa assets/fishery/models/block/netherite_crate.json
+5d1d43f5ed1deff58b406857356f79fd138d8030 assets/fishery/models/block/wooden_crate.json
+03e7ef477a522df9b85542a3f5924af6375d61a5 assets/fishery/models/item/diamond_crate.json
+756bd6ec0779dc24373f9d0af8e9d96533d6bcf3 assets/fishery/models/item/golden_crate.json
+e8b26497691bec5df90f00713e193fd614a62b53 assets/fishery/models/item/iron_crate.json
+f0acd4fd2506128608ce6fcd03451eff9ef68213 assets/fishery/models/item/netherite_crate.json
+ded50845d3e5513af1dbee43ec60a98f0ec5f5e8 assets/fishery/models/item/wooden_crate.json

@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "gay.nyako.examplemod.ExampleMod"
+            "gay.nyako.fishery.FisheryMod"
         ],
         "client": [
-            "gay.nyako.examplemod.ExampleClientMod"
+            "gay.nyako.fishery.FisheryClientMod"
         ]
     },
     "mixins": [
