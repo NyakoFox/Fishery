@@ -1,0 +1,103 @@
+import io.github.themrmilchmann.gradle.publish.curseforge.*
+
+plugins {
+    id 'multiloader-loader'
+    id 'fabric-loom'
+    id "io.github.themrmilchmann.curseforge-publish" version "0.6.1"
+    id "com.modrinth.minotaur" version "2.+"
+}
+
+curseforge {
+    apiToken = env.CURSEFORGE_TOKEN.value
+    publications {
+        named("fabric") {
+            projectId = project.curseforge_id
+
+            artifacts.named("main") {
+                displayName = "${mod_name} (Fabric) ${version}+${minecraft_version}"
+                releaseType = ReleaseType.RELEASE
+
+                changelog {
+                    format = ChangelogFormat.MARKDOWN
+                    content = file('../CHANGELOG.md').text
+                }
+
+                relations {
+                    requiredDependency("fabric-api")
+                    requiredDependency("forge-config-api-port-fabric")
+                    optionalDependency("modmenu")
+                }
+            }
+        }
+    }
+}
+
+modrinth {
+    token = env.MODRINTH_TOKEN.value
+    projectId = project.modrinth_id
+    versionNumber = "${version}+${minecraft_version}"
+    versionName = "${mod_name} (Fabric) ${version}+${minecraft_version}"
+    versionType = "release"
+    uploadFile = remapJar
+    gameVersions = List<String>.of(project.game_versions.split(","))
+    loaders = ["fabric"]
+    changelog = file("../CHANGELOG.md").text
+    dependencies {
+        // scope.type
+        // The scope can be `required`, `optional`, `incompatible`, or `embedded`
+        // The type can either be `project` or `version`
+        required.project "fabric-api" // Creates a new required dependency on Fabric API
+        required.project "forge-config-api-port"
+        optional.project "modmenu"
+    }
+}
+
+repositories {
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.layered {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
+    }
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+
+    modImplementation "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:21.1.0"
+
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+}
+
+loom {
+    def aw = project(':common').file("src/main/resources/${mod_id}.accesswidener")
+    if (aw.exists()) {
+        accessWidenerPath.set(aw)
+    }
+    mixin {
+        defaultRefmapName.set("${mod_id}.refmap.json")
+    }
+    runs {
+        client {
+            client()
+            setConfigName('Fabric Client')
+            ideConfigGenerated(true)
+            runDir('runs/client')
+        }
+        server {
+            server()
+            setConfigName('Fabric Server')
+            ideConfigGenerated(true)
+            runDir('runs/server')
+        }
+    }
+}

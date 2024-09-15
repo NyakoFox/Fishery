@@ -1,0 +1,93 @@
+import io.github.themrmilchmann.gradle.publish.curseforge.*
+
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev'
+    id "io.github.themrmilchmann.curseforge-publish" version "0.6.1"
+    id "com.modrinth.minotaur" version "2.+"
+}
+
+curseforge {
+    apiToken = env.CURSEFORGE_TOKEN.value
+    publications {
+        register("curseForge") {
+            projectId = project.curseforge_id
+
+            artifacts.register("main") {
+                from(tasks.named("jar"))
+
+                displayName = "${mod_name} (NeoForge) ${version}+${minecraft_version}"
+                releaseType = ReleaseType.RELEASE
+
+                changelog {
+                    format = ChangelogFormat.MARKDOWN
+                    content = file('../CHANGELOG.md').text
+                }
+
+                relations {
+                    // requiredDependency("slug-here")
+                }
+            }
+        }
+    }
+}
+
+modrinth {
+    token = env.MODRINTH_TOKEN.value
+    projectId = project.modrinth_id
+    versionNumber = "${version}+${minecraft_version}"
+    versionName = "${mod_name} (NeoForge) ${version}+${minecraft_version}"
+    versionType = "release"
+    uploadFile = jar
+    gameVersions = List<String>.of(project.game_versions.split(","))
+    loaders = ["neoforge"]
+    changelog = file("../CHANGELOG.md").text
+    dependencies {
+        // required.project "slug-here"
+    }
+}
+
+repositories {
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+}
+
+dependencies {
+}
+
+neoForge {
+    version = neoforge_version
+    // Automatically enable neoforge AccessTransformers if the file exists
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.add(at.absolutePath)
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
+    }
+    runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})" // Unify the run config names with fabric
+        }
+        client {
+            client()
+        }
+        data {
+            data()
+        }
+        server {
+            server()
+        }
+    }
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
