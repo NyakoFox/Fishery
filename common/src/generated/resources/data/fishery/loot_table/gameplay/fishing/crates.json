@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishery:wooden_crate",
+          "weight": 12
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishery:iron_crate",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishery:golden_crate",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishery:diamond_crate",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishery:netherite_crate"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "fishery:gameplay/fishing/crates"
+}

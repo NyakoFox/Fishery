@@ -1,0 +1,7 @@
+// 1.21	2024-09-16T20:16:46.8246307	Loot Tables
+05b49a47654343cd701028b8cb91d357d8e438b7 data/fishery/loot_table/gameplay/fishing/crates.json
+877a46336bf6457a48ad7c1d8b715e7313d2b1d4 data/fishery/loot_table/gameplay/fishing/diamond_crate.json
+0b8c079a78fedaa44eebe27388a75b09c0b6466b data/fishery/loot_table/gameplay/fishing/golden_crate.json
+3bccd6ec2ae12f35ada6be4f77f94c09c7a16bdb data/fishery/loot_table/gameplay/fishing/iron_crate.json
+e101eb65627622f105fa3834067076a54a574696 data/fishery/loot_table/gameplay/fishing/netherite_crate.json
+2be2324ae5644ddd8ecc496cb95c56f45f526f72 data/fishery/loot_table/gameplay/fishing/wooden_crate.json

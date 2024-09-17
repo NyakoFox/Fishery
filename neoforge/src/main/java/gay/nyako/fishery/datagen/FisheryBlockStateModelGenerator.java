@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class FisheryModelGenerator extends BlockStateProvider {
-    public FisheryModelGenerator(PackOutput output, ExistingFileHelper exFileHelper) {
+public class FisheryBlockStateModelGenerator extends BlockStateProvider {
+    public FisheryBlockStateModelGenerator(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Constants.MOD_ID, exFileHelper);
     }
 

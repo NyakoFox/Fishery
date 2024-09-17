@@ -7,5 +7,7 @@
     "block.fishery.iron_crate": "Iron Crate",
     "block.fishery.golden_crate": "Golden Crate",
     "block.fishery.diamond_crate": "Diamond Crate",
-    "block.fishery.netherite_crate": "Netherite Crate"
+    "block.fishery.netherite_crate": "Netherite Crate",
+
+    "item.fishery.specular_fish": "Specular Fish"
 }
