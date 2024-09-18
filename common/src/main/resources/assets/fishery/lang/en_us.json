@@ -9,5 +9,12 @@
     "block.fishery.diamond_crate": "Diamond Crate",
     "block.fishery.netherite_crate": "Netherite Crate",
 
-    "item.fishery.specular_fish": "Specular Fish"
+    "item.fishery.blue_cod": "Raw Cod",
+    "item.fishery.blue_cooked_cod": "Cooked Cod",
+    "item.fishery.specular_fish": "Specular Fish",
+    "item.fishery.heartfish": "Heartfish",
+    "item.fishery.coalfish": "Coalfish",
+    "item.fishery.obsidifin": "Obsidifin",
+
+    "item.fishery.recall_potion": "Potion of Recall"
 }

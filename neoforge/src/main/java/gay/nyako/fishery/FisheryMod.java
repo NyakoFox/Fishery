@@ -41,22 +41,24 @@ public class FisheryMod {
         if (event.getName().equals(BuiltInLootTables.FISHING.location()))
         {
             // Inject our custom fish
-            injectLoot(event.getTable(), LootItem.lootTableItem(FisheryItems.SPECULAR_FISH).setWeight(1).build());
+            injectLoot(event.getTable(), CommonClass.getFishingEntries());
         }
         if (event.getName().equals(BuiltInLootTables.FISHING_TREASURE.location()))
         {
             // Inject crates into the treasure pool
-            injectLoot(event.getTable(), NestedLootTable.lootTableReference(ResourceKey.create(Registries.LOOT_TABLE, FisheryLoot.CRATE_LOOT_TABLE)).build());
+            injectLoot(event.getTable(), List.of(NestedLootTable.lootTableReference(ResourceKey.create(Registries.LOOT_TABLE, FisheryLoot.CRATE_LOOT_TABLE))));
         }
     }
 
-    private static void injectLoot(LootTable table, LootPoolEntryContainer entry)
+    private static void injectLoot(LootTable table, List<LootPoolEntryContainer.Builder<?>> newEntries)
     {
         var pool = table.getPool("main");
         if (pool != null) {
-            ArrayList<LootPoolEntryContainer> entries = new ArrayList<>();
-            entries.addAll(pool.entries);
-            entries.add(entry);
+            ArrayList<LootPoolEntryContainer> entries = new ArrayList<>(pool.entries);
+            for (var newEntry : newEntries)
+            {
+                entries.add(newEntry.build());
+            }
             pool.entries = entries;
         }
     }

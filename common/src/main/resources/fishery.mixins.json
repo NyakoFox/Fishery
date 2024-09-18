@@ -4,7 +4,9 @@
   "package": "gay.nyako.fishery.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "PotionBrewingMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {

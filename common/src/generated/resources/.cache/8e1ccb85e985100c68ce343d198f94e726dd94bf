@@ -1,2 +1,8 @@
-// 1.21	2024-09-16T20:03:28.7932249	Item Models: fishery
+// 1.21	2024-09-17T20:01:39.6526254	Item Models: fishery
+14288cae3e9c5b53f1721531555fee970a3f349b assets/fishery/models/item/blue_cod.json
+3c71485c42ea57edb167155e9928f397bb97e26b assets/fishery/models/item/blue_cooked_cod.json
+33a53366b7ccbe2b9c46e48c1857981ef2b9f6ae assets/fishery/models/item/coalfish.json
+f59b5470ce2e66dccfa6c008ea4dc2bba11d269a assets/fishery/models/item/heartfish.json
+a698c9073416bf5dc0e79f3fc31df3c9829700af assets/fishery/models/item/obsidifin.json
+38d12eaef15c7c98ef11c75fa59f2c01b6897dfc assets/fishery/models/item/recall_potion.json
 df566c063641327cfe092a93c8620c04be57cc8a assets/fishery/models/item/specular_fish.json

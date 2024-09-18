@@ -14,5 +14,12 @@ public class FisheryItemModelGenerator extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(FisheryItems.SPECULAR_FISH);
+        basicItem(FisheryItems.HEARTFISH);
+        basicItem(FisheryItems.BLUE_COD);
+        basicItem(FisheryItems.BLUE_COOKED_COD);
+        basicItem(FisheryItems.COALFISH);
+        basicItem(FisheryItems.OBSIDIFIN);
+
+        basicItem(FisheryItems.RECALL_POTION);
     }
 }
