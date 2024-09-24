@@ -20,7 +20,8 @@ public class CommonClass {
                 LootItem.lootTableItem(FisheryItems.HEARTFISH).setWeight(2),
                 LootItem.lootTableItem(FisheryItems.BLUE_COD).setWeight(2),
                 LootItem.lootTableItem(FisheryItems.COALFISH).setWeight(8),
-                LootItem.lootTableItem(FisheryItems.OBSIDIFIN).setWeight(1)
+                LootItem.lootTableItem(FisheryItems.OBSIDIFIN).setWeight(1),
+                LootItem.lootTableItem(FisheryItems.SNAPPER).setWeight(8)
         );
     }
 }

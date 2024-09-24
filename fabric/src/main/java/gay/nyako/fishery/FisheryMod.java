@@ -61,6 +61,8 @@ public class FisheryMod implements ModInitializer {
                     itemGroup.accept(FisheryItems.BLUE_COOKED_COD);
                     itemGroup.accept(FisheryItems.COALFISH);
                     itemGroup.accept(FisheryItems.OBSIDIFIN);
+                    itemGroup.accept(FisheryItems.SNAPPER);
+                    itemGroup.accept(FisheryItems.COOKED_SNAPPER);
                 });
     }
 }

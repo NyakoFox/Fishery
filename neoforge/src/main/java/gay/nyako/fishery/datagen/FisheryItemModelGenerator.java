@@ -19,6 +19,8 @@ public class FisheryItemModelGenerator extends ItemModelProvider {
         basicItem(FisheryItems.BLUE_COOKED_COD);
         basicItem(FisheryItems.COALFISH);
         basicItem(FisheryItems.OBSIDIFIN);
+        basicItem(FisheryItems.SNAPPER);
+        basicItem(FisheryItems.COOKED_SNAPPER);
 
         basicItem(FisheryItems.RECALL_POTION);
     }

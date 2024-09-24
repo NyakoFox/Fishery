@@ -13,6 +13,8 @@ public class FisheryItems {
     public static final Item BLUE_COOKED_COD = register(Utils.id("blue_cooked_cod"), new Item(new Item.Properties().food(Foods.COOKED_COD)));
     public static final Item COALFISH = register(Utils.id("coalfish"), new Item(new Item.Properties().food(Foods.TROPICAL_FISH)));
     public static final Item OBSIDIFIN = register(Utils.id("obsidifin"), new Item(new Item.Properties().food(FisheryFoods.OBSIDIFIN)));
+    public static final Item SNAPPER = register(Utils.id("snapper"), new Item(new Item.Properties().food(Foods.COD)));
+    public static final Item COOKED_SNAPPER = register(Utils.id("cooked_snapper"), new Item(new Item.Properties().food(Foods.COOKED_COD)));
 
     public static final Item RECALL_POTION = register(Utils.id("recall_potion"), new RecallPotionItem(new Item.Properties()));
 

@@ -33,6 +33,8 @@ public class FisheryClientMod {
             event.accept(FisheryItems.BLUE_COOKED_COD);
             event.accept(FisheryItems.COALFISH);
             event.accept(FisheryItems.OBSIDIFIN);
+            event.accept(FisheryItems.SNAPPER);
+            event.accept(FisheryItems.COOKED_SNAPPER);
         }
     }
 }
